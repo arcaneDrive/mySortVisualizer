@@ -1,13 +1,58 @@
+@import url("https://fonts.googleapis.com/css2?family=Oswald&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+  font-family: "Oswald", -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto",
+    "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+
+  @apply text-xl;
 }
 
 code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
+}
+
+h1 {
+  @apply text-2xl;
+}
+
+button {
+  @apply scale-100 p-2 text-[#463F3A] rounded-md border-2 border-[#463F3A] flex items-center bg-orange-600 transition-transform;
+}
+
+button:hover {
+  @apply bg-[#463F3A] text-orange-600;
+}
+
+input[type="radio"],
+input[type="range"] {
+  @apply accent-orange-600;
+}
+
+button:disabled {
+  @apply bg-slate-400 text-slate-950;
+}
+
+.active-speed {
+  @apply bg-[#463F3A] text-orange-600;
+}
+
+.array-container {
+  @apply max-w-7xl w-full px-4 grid sm:gap-1 grid-cols-[repeat(auto-fit,_minmax(2px,_1fr))] justify-center items-end transition-all duration-300 overflow-auto;
+}
+
+.array-div {
+  @apply bg-orange-600 sm:rounded-xl;
+}
+
+.div-green {
+  @apply bg-green-600;
 }
